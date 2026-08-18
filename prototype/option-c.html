@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Option C — AI Auto-draft + Human Review — AI tạo nháp, người học duyệt
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+</head>
+
+<body>
+
+<div class="shell">
+
+  <div class="topbar">
+
+    <div>
+
+      <div class="brand">
+        VLEARN · Ghi chú học tập cá nhân
+      </div>
+
+      <div class="lesson">
+        SQL JOINs cơ bản · Bài 4
+      </div>
+
+    </div>
+
+    <span class="badge">
+      OPTION C · AI-LED · AI TẠO TRƯỚC
+    </span>
+
+  </div>
+
+  <section class="panel">
+
+    <h1>
+      AI Auto-draft + Human Review — AI tạo nháp, người học duyệt
+    </h1>
+
+    <div id="c-intro">
+
+      <div class="notice">
+
+        <strong>AI sẽ làm gì?</strong>
+
+        <p>
+          AI sẽ tạo một bản nháp từ:
+        </p>
+
+        <ul>
+          <li>3 đoạn đánh dấu</li>
+          <li>1 phần chưa hiểu</li>
+          <li>1 câu hỏi</li>
+          <li>1 ghi chú cá nhân</li>
+        </ul>
+
+        <p>
+          AI có thể phân loại sai.
+          Hãy xem lại trước khi lưu.
+        </p>
+
+      </div>
+
+      <div class="actions">
+
+        <button
+          class="btn"
+          onclick="optionCGenerate()"
+        >
+          Tạo bản nháp
+        </button>
+
+        <a
+          class="btn ghost"
+          href="index.html"
+        >
+          Về A/B/C
+        </a>
+
+      </div>
+
+    </div>
+
+    <div
+      id="c-draft"
+      class="hidden"
+    >
+
+      <h2>
+        Bản ghi chú do AI tạo — Bản nháp
+      </h2>
+
+      <div class="note-item">
+
+        <strong>INNER JOIN</strong>
+
+        <br>
+
+        Chỉ trả về những dòng có bản ghi khớp ở cả hai bảng.
+
+        <span class="source">
+          Nguồn: Bài 4 · 03:15
+        </span>
+
+      </div>
+
+      <div class="note-item">
+
+        <strong>LEFT JOIN</strong>
+
+        <br>
+
+        Giữ toàn bộ dòng từ bảng bên trái
+        kể cả khi phía phải không khớp.
+
+        <span class="source">
+          Nguồn: Bài 4 · 06:32
+        </span>
+
+      </div>
+
+      <div
+        id="c-low"
+        class="note-item warning"
+      >
+
+        <span class="badge">
+          ĐỘ TIN CẬY: THẤP
+        </span>
+
+        <h3>
+          ON và WHERE khác nhau thế nào?
+        </h3>
+
+        <p>
+          AI phân loại item này vào mục “Chưa hiểu”.
+        </p>
+
+        <span class="source">
+          Nguồn: dấu vết của bạn · 10:20
+        </span>
+
+        <div class="actions">
+
+          <button class="btn secondary" onclick="toggleEditing('c-low', this)">
+            Sửa mục này
+          </button>
+
+          <button
+            class="btn danger-btn"
+            onclick="optionCRejectLow()"
+          >
+            Từ chối mục này
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="note-item">
+
+        <strong>Việc tiếp theo</strong>
+
+        <br>
+
+        Xem lại LEFT JOIN và tìm ví dụ FULL OUTER JOIN.
+
+        <span class="source">
+          AI tạo từ các dấu vết của bạn
+        </span>
+
+      </div>
+
+      <div class="actions">
+
+        <button class="btn secondary" onclick="toggleEditing('c-draft', this)">
+          Sửa bản nháp
+        </button>
+
+        <button
+          class="btn"
+          onclick="optionCSave()"
+        >
+          Lưu
+        </button>
+
+        <button
+          class="btn ghost"
+          onclick="resetPage()"
+        >
+          Quay về dấu vết ban đầu
+        </button>
+
+        <a
+          class="btn ghost"
+          href="index.html"
+        >
+          Về A/B/C
+        </a>
+
+      </div>
+
+    </div>
+
+    <div
+      id="c-saved"
+      class="hidden"
+    >
+
+      <div
+        class="card success"
+        style="padding:22px"
+      >
+
+        <h2>
+          Bản ghi chú đã lưu
+        </h2>
+
+        <p>
+          Bạn vẫn có thể hoàn tác hoặc mở lại ghi chú để chỉnh sửa.
+        </p>
+
+        <div class="actions">
+
+          <button
+            class="btn secondary"
+            onclick="optionCUndo()"
+          >
+            Hoàn tác
+          </button>
+
+          <button
+            class="btn ghost"
+            onclick="resetPage()"
+          >
+            Làm lại từ đầu
+          </button>
+
+          <a
+            class="btn ghost"
+            href="index.html"
+          >
+            Về A/B/C
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Option B — Guided AI Co-creation — Đồng tạo có AI hướng dẫn
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+</head>
+
+<body>
+
+<div class="shell">
+
+  <div class="topbar">
+
+    <div>
+
+      <div class="brand">
+        VLEARN · Ghi chú học tập cá nhân
+      </div>
+
+      <div class="lesson">
+        SQL JOINs cơ bản · Bài 4
+      </div>
+
+    </div>
+
+    <span class="badge">
+      OPTION B · CO-CREATE · NGƯỜI HỌC VÀ AI CÙNG LÀM
+    </span>
+
+  </div>
+
+  <section class="panel">
+
+    <h1>
+      Guided AI Co-creation — Đồng tạo có AI hướng dẫn
+    </h1>
+
+    <div id="b-intro">
+
+      <div class="notice">
+
+        <strong>AI sẽ làm gì?</strong>
+
+        <p>
+          AI sẽ nhóm các dấu vết bạn đã tạo.
+        </p>
+
+        <p>
+          Nếu AI không chắc ý định của bạn,
+          AI sẽ hỏi trước.
+        </p>
+
+        <p>
+          Bạn có thể xác nhận, sửa, bỏ qua hoặc làm lại từ đầu.
+        </p>
+
+      </div>
+
+      <div class="actions">
+
+        <button
+          class="btn"
+          onclick="optionBStart()"
+        >
+          Bắt đầu tạo bản ghi chú
+        </button>
+
+        <a
+          class="btn ghost"
+          href="index.html"
+        >
+          Về A/B/C
+        </a>
+
+      </div>
+
+    </div>
+
+    <div
+      id="b-confirm"
+      class="hidden"
+    >
+
+      <div class="two-col">
+
+        <div>
+
+          <h2>
+            AI đã nhóm phần chắc chắn
+          </h2>
+
+          <div class="note-item success">
+
+            <strong>Điểm chính</strong>
+
+            <br>
+
+            INNER JOIN chỉ giữ các dòng khớp.
+
+            <span class="source">
+              Nguồn: Bài 4 · 03:15
+            </span>
+
+          </div>
+
+          <div class="note-item success">
+
+            <strong>Điểm chính</strong>
+
+            <br>
+
+            LEFT JOIN giữ toàn bộ dòng phía trái.
+
+            <span class="source">
+              Nguồn: Bài 4 · 06:32
+            </span>
+
+          </div>
+
+        </div>
+
+        <div>
+
+          <div
+            class="card warning"
+            style="padding:18px"
+          >
+
+            <span class="badge">
+              CẦN BẠN XÁC NHẬN
+            </span>
+
+            <h2>
+              “ON và WHERE khác nhau thế nào khi dùng LEFT JOIN?”
+            </h2>
+
+            <p class="muted">
+              AI chưa chắc bạn muốn dùng item này theo cách nào.
+            </p>
+
+            <span class="source">
+              Nguồn: dấu vết của bạn · 10:20
+            </span>
+
+            <div
+              class="radio-list"
+              style="margin-top:12px"
+            >
+
+              <label>
+                <input
+                  type="radio"
+                  name="classification"
+                  value="Phần chưa hiểu"
+                  checked
+                >
+                Phần chưa hiểu
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="classification"
+                  value="Câu hỏi cần hỏi"
+                >
+                Câu hỏi cần hỏi
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="classification"
+                  value="Ghi chú cá nhân"
+                >
+                Ghi chú cá nhân
+              </label>
+
+            </div>
+
+            <div class="actions">
+
+              <button
+                class="btn"
+                onclick="optionBConfirm()"
+              >
+                Xác nhận phân loại
+              </button>
+
+              <button
+                class="btn ghost"
+                onclick="optionBSkip()"
+              >
+                Bỏ qua mục này
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div
+      id="b-result"
+      class="hidden"
+    >
+
+      <h2>
+        Bản ghi chú học tập của bạn
+      </h2>
+
+      <div class="columns">
+
+        <div class="bucket">
+
+          <h3>Điểm chính</h3>
+
+          <div class="note-item">
+            INNER JOIN…
+
+            <span class="source">
+              Nguồn: Bài 4 · 03:15
+            </span>
+          </div>
+
+          <div class="note-item">
+            LEFT JOIN…
+
+            <span class="source">
+              Nguồn: Bài 4 · 06:32
+            </span>
+          </div>
+
+        </div>
+
+        <div class="bucket">
+
+          <h3 id="b-choice">
+            Phần chưa hiểu
+          </h3>
+
+          <div class="note-item">
+            ON và WHERE khác nhau thế nào?
+
+            <span class="source">
+              Nguồn: dấu vết của bạn · 10:20
+            </span>
+          </div>
+
+        </div>
+
+        <div class="bucket">
+
+          <h3>Việc tiếp theo</h3>
+
+          <div class="note-item">
+            Xem lại LEFT JOIN và FULL OUTER JOIN.
+
+            <span class="source">
+              AI tạo từ các dấu vết của bạn
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="actions">
+
+        <button class="btn secondary" onclick="toggleEditing('b-result', this)">
+          Sửa nội dung
+        </button>
+
+        <button class="btn" onclick="show('b-saved')">
+          Lưu
+        </button>
+
+        <button
+          class="btn ghost"
+          onclick="resetPage()"
+        >
+          Làm lại từ đầu
+        </button>
+
+        <a
+          class="btn ghost"
+          href="index.html"
+        >
+          Về A/B/C
+        </a>
+
+      </div>
+
+      <div id="b-saved" class="notice success hidden" role="status">
+        Bản ghi chú đã được lưu. Bạn vẫn có thể sửa hoặc làm lại từ đầu.
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
