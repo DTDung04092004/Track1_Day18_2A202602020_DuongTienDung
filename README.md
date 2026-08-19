@@ -106,3 +106,4 @@ Hướng dẫn chi tiết theo từng chặng và checklist nộp bài: [day18-s
 - [group-feedback-synthesis.md](group-feedback-synthesis.md) — tổng hợp nhóm sau ba test.
 - [ai-support-log.md](ai-support-log.md) — khai báo sử dụng AI cá nhân.
 - [day18-submission-guide.md](day18-submission-guide.md) — cách làm và nộp từng Gate.
+- [testing-guide.md](testing-guide.md) — cách gửi prototype, điều phối và ghi ba phiên thử.
