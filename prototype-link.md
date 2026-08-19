@@ -2,9 +2,31 @@
 
 ## Mở prototype trên máy
 
-Mở file [prototype/index.html](prototype/index.html) bằng trình duyệt. Từ màn hình **Bối cảnh dùng chung**, người thử lần lượt vào A/B/C và dùng nút **Về A/B/C** hoặc **Làm lại từ đầu** để quay lại trạng thái đầu.
+### Chạy bằng PyCharm
 
-Nếu trình duyệt hạn chế JavaScript khi mở file trực tiếp, chạy một local server trong thư mục repository, ví dụ bằng VS Code Live Server, rồi mở `prototype/index.html`.
+1. Mở toàn bộ repository bằng PyCharm.
+2. Trong cửa sổ `Project`, mở thư mục `prototype`.
+3. Nhấp phải `index.html` → `Open in Browser` → chọn Chrome/Edge/Firefox.
+4. Hoặc mở `index.html`, sau đó chọn `View` → `Open in Browser`.
+5. PyCharm sẽ dùng web server tích hợp, thường chạy ở cổng `63342`; không cần cài VS Code hoặc Live Server.
+
+Khi lưu HTML/CSS/JavaScript, PyCharm có thể tự tải lại trang. Nếu chưa tự tải lại, nhấn `Ctrl+F5` trong trình duyệt.
+
+Từ màn hình **Bối cảnh dùng chung**, người thử lần lượt vào A/B/C và dùng nút **Quay lại chọn phương án** hoặc **Làm lại từ đầu** để trở về trạng thái đầu.
+
+### Cách dự phòng bằng Python
+
+Mở Terminal trong PyCharm tại thư mục repository và chạy:
+
+```powershell
+python -m http.server 5500
+```
+
+Sau đó mở:
+
+```text
+http://localhost:5500/prototype/
+```
 
 ## GitHub Pages Deployment — Cách xuất bản
 
