@@ -17,10 +17,14 @@
 
 ## Status — Trạng thái
 
-**CONDITIONAL PASS — Đạt phần kỹ thuật, chưa hoàn tất usability check.**
+**CONDITIONAL PASS — Public prototype đã hoạt động, chưa hoàn tất usability check.**
 
 Còn phải:
 
-1. Cho một người không build tự dùng A/B/C mà không được giải thích.
-2. Publish prototype và dán public URL vào `prototype-link.md`.
-3. Mở link bằng cửa sổ ẩn danh trước khi nộp.
+Public URL đã được deploy và xác minh trả về HTTP 200 ngày 19/08/2026:
+
+```text
+https://dtdung04092004.github.io/Track1_Day18_2A202602020_DuongTienDung/
+```
+
+Còn phải cho một người không build tự dùng A/B/C mà không được giải thích, rồi ghi lại interaction breakdown nếu có.

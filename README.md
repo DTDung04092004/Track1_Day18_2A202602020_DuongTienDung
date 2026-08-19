@@ -49,7 +49,7 @@ Ba phương án dùng chung người dùng, tình huống, nhiệm vụ, kết q
 | **B — Guided AI Co-creation — Đồng tạo có AI hướng dẫn** | Người học và AI cùng làm | Xác nhận, đổi phân loại hoặc bỏ qua phần chưa chắc | Nhóm phần chắc chắn và hỏi trước ở phần chưa chắc | Giảm công sức nhưng có thể hỏi gây gián đoạn |
 | **C — AI Auto-draft + Human Review — AI tạo nháp, người học duyệt** | AI làm trước, người học duyệt | Kiểm tra nguồn, sửa/từ chối mục, lưu hoặc hoàn tác | Tạo toàn bộ bản nháp và báo phần có độ chắc chắn thấp | Nhanh nhưng tăng nguy cơ tin AI quá mức |
 
-Prototype: mở [prototype/index.html](prototype/index.html), sau đó thực hiện cùng một task trên A/B/C. Hướng dẫn mở và publish nằm trong [prototype-link.md](prototype-link.md).
+Prototype công khai: [mở A/B/C trên GitHub Pages](https://dtdung04092004.github.io/Track1_Day18_2A202602020_DuongTienDung/), sau đó thực hiện cùng một task trên A/B/C. Hướng dẫn chạy và kiểm link nằm trong [prototype-link.md](prototype-link.md).
 
 ## 4. My Contribution — Đóng góp của tôi trong nhóm
 
@@ -91,7 +91,7 @@ Việc sử dụng AI và phần Dũng tự quyết định lại được ghi t
 | **1 — Tính liên tục của bằng chứng** | Đạt ở mức tài liệu | Giả thuyết vấn đề, hai Phiếu ghi chép thật, bằng chứng ngược, điều chưa chứng minh | Nhóm xác nhận cách diễn đạt cuối |
 | **2 — Các phương án khác biệt có ý nghĩa** | Đạt ở mức thiết kế | A/B/C cùng Cam kết so sánh và khác cách chia vai trò | Cho một người không build kiểm tra độ khác biệt |
 | **3 — Quyền kiểm soát của con người** | Đạt ở mức thiết kế | Kỳ vọng, quyền chủ động, bằng chứng/độ không chắc chắn, kiểm soát/phục hồi | Kiểm tra người dùng có nhận ra các cách kiểm soát hay không |
-| **4 — Sẵn sàng để thử** | Chờ kiểm tra khả năng sử dụng | Có prototype chạy trên máy và đường quay lại | Một người ngoài nhóm tự thao tác A/B/C; xuất bản đường dẫn mở được cho giảng viên |
+| **4 — Sẵn sàng để thử** | Public prototype đã hoạt động; chờ kiểm tra khả năng sử dụng | GitHub Pages HTTP 200, A/B/C và đường quay lại | Một người ngoài nhóm tự thao tác A/B/C mà không được giải thích |
 | **5 — Bài học thu được** | **Chưa đạt** | Mới có mẫu | Hoàn thành 3 phiên thử thật, 3 Phiếu phản hồi và 1 Thay đổi tiếp theo của nhóm |
 
 Hướng dẫn chi tiết theo từng chặng và checklist nộp bài: [day18-submission-guide.md](day18-submission-guide.md).

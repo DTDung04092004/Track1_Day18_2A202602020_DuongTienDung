@@ -18,7 +18,7 @@ Trên GitHub, thực hiện một lần:
 4. Chọn `Run workflow` nếu workflow chưa tự chạy.
 5. Khi job hoàn tất, mở URL trong phần deployment.
 
-**Public prototype URL dự kiến:**
+**Public prototype URL — đã xác minh HTTP 200 ngày 19/08/2026:**
 
 ```text
 https://dtdung04092004.github.io/Track1_Day18_2A202602020_DuongTienDung/
