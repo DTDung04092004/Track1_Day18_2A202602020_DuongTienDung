@@ -54,4 +54,4 @@ Trước khi nộp, mở link trong cửa sổ ẩn danh và kiểm tra:
 - mỗi option có đường reset/quay về A/B/C;
 - người thử có thể hoàn thành nhiệm vụ mà không cần người điều phối giải thích giao diện.
 
-> Đường dẫn local chỉ dùng để phát triển. Chỉ thay trạng thái Gate 4 thành PASS sau khi URL công khai đã được mở thành công trong cửa sổ ẩn danh và một người không build tự thao tác được A/B/C.
+> Đường dẫn local chỉ dùng để phát triển. Gate 4 hiện là PASS vì URL công khai đã hoạt động và ba người thử ngoài nhóm đã tự thao tác A/B/C mà không cần hướng dẫn nút.

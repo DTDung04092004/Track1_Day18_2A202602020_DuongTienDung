@@ -15,9 +15,10 @@ Mỗi option phải làm rõ:
 - Option A có phân loại thủ công, bỏ item, gọi/bỏ qua gợi ý và làm lại.
 - Option B có xác nhận, đổi phân loại, bỏ qua, sửa, lưu và làm lại.
 - Option C có source, confidence thấp, sửa, từ chối, lưu, undo và quay về raw traces.
+- T01 dùng radio ở B và gọi AI gợi ý ở A; T02 sửa mục ở C; T03 dùng làm lại ở A. Cả ba tự tìm được control/recovery mà không cần hướng dẫn thao tác.
 
 ## Status — Trạng thái
 
-**PASS at design and interaction level — Đạt ở mức thiết kế và tương tác.**
+**PASS — ĐẠT.**
 
-Gate chỉ được xác nhận hoàn toàn sau khi usability check cho thấy người thử nhận ra và dùng được các control mà không cần giải thích.
+Human–AI Decision Table mô tả đầy đủ expectation, agency, evidence/uncertainty và recovery; usability evidence xác nhận các control chính có thể được tìm và sử dụng trong ba phiên.

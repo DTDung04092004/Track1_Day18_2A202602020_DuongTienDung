@@ -10,12 +10,14 @@
 
 ## Repository Evidence — Bằng chứng trong repository
 
-- `prototype-feedback-note.md` là mẫu cho phiên do Dương Tiến Dũng facilitate.
-- `group-feedback-synthesis.md` là mẫu tổng hợp ba feedback.
-- Các ô chưa có evidence thật được giữ là `[CHƯA ĐIỀN]`.
+- `feedback/feedback-note-t01.md`: T01 do Hoàng Thị Thuyên điều phối.
+- `feedback/feedback-note-t02.md`: T02 do Dương Tiến Dũng điều phối.
+- `feedback/feedback-note-t03.md`: T03 do Dương Tiến Dũng điều phối.
+- `prototype-feedback-note.md`: phần phiên T02/T03 do người nộp trực tiếp điều phối.
+- `group-feedback-synthesis.md`: comparison, pattern/difference, Decision Evidence, One Next Change và Still Unproven.
 
 ## Status — Trạng thái
 
-**NOT YET PASSED — CHƯA ĐẠT.**
+**PASS — ĐẠT.**
 
-Cần hoàn thành ba phiên test thật, điền ba Feedback Notes, rồi chốt một Next Change và một Still Unproven. Không dùng AI tạo observation, quote, lựa chọn hoặc feedback.
+Nhóm có ba Feedback Notes độc lập. Evidence dẫn tới một thay đổi tiếp theo: giữ B làm cơ chế chính và bổ sung Gated Confirmation. Nhóm vẫn ghi rõ ba điều chưa được chứng minh và không tuyên bố solution đã validated.

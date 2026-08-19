@@ -11,7 +11,8 @@ Tôi sử dụng ChatGPT để:
 - rà soát các quyết định về kỳ vọng, quyền chủ động, bằng chứng, độ không chắc chắn, kiểm soát và khôi phục;
 - hỗ trợ xây dựng prototype nhỏ bằng HTML/CSS/JavaScript với kết quả AI dựng sẵn;
 - rà soát lời giao nhiệm vụ để tránh chỉ nút hoặc dẫn dắt lựa chọn của người thử;
-- kiểm tra kỹ thuật cấu trúc HTML/JavaScript và các liên kết nội bộ của prototype.
+- kiểm tra kỹ thuật cấu trúc HTML/JavaScript và các liên kết nội bộ của prototype;
+- tổ chức lại dữ liệu T01/T02/T03 do nhóm cung cấp thành ba Feedback Notes và Group Synthesis dễ đối chiếu, không bổ sung hành vi hoặc lời nói mới.
 
 ---
 
@@ -45,7 +46,9 @@ AI không thể biết trước:
 - Mỗi phương án đều có bằng chứng/nguồn.
 - Phương án B và C thể hiện độ không chắc chắn rõ.
 - Mỗi option đều có đường control hoặc recovery.
-- Phản hồi sau thử chỉ được ghi từ phiên thử thật.
+- Trực tiếp điều phối T02 và T03; giữ T01 là phiên do Hoàng Thị Thuyên điều phối.
+- Phản hồi sau thử chỉ được ghi từ phiên thử thật; không dùng AI để tạo tester, observation, quote, lựa chọn hoặc feedback.
+- Chọn Option B làm cơ chế chính cho iteration sau và thêm Gated Confirmation dựa trên evidence người thử bỏ qua cảnh báo ở C.
 
 ---
 

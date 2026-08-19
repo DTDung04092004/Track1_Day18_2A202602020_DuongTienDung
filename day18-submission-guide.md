@@ -1,5 +1,7 @@
 # Day 18 Gate & Submission Guide — Hướng dẫn làm và nộp bài theo từng Gate
 
+> **Trạng thái repository hiện tại:** đã có đủ Design Sheet, prototype A/B/C công khai, ba Feedback Notes T01/T02/T03, Group Synthesis, One Next Change, Still Unproven và AI Support Log. Cả năm Gate đã được đối chiếu là PASS; vẫn cần kiểm link công khai lần cuối sau mỗi lần push.
+
 ## Quick Overview — Cách hiểu ngắn gọn
 
 Day 18 không đi tìm vấn đề mới. Nhóm lấy bằng chứng Day 17, giữ một Giả thuyết vấn đề, tạo ba cách giải thật sự khác nhau về cơ chế và cách chia việc giữa người học–AI, xây ba prototype nhỏ có thể thao tác, rồi cho mỗi người thử trải nghiệm cả A/B/C. Kết quả cuối là **một thay đổi tiếp theo**, không phải tuyên bố giải pháp đã được kiểm chứng.
@@ -108,7 +110,7 @@ Không chỉ ghi control trong tài liệu. Tester phải nhìn thấy và dùng
 
 ### Submission Artifact — Tài liệu cần nộp
 
-- `prototype-feedback-note.md`: phiên do chính người nộp điều phối.
+- `prototype-feedback-note.md`: các phiên T02 và T03 do chính người nộp điều phối, kèm link tới từng phiếu độc lập.
 - `group-feedback-synthesis.md`: ba phản hồi, điểm lặp lại/khác biệt, Thay đổi tiếp theo và điều vẫn chưa được chứng minh.
 
 ### Self-check — Tự kiểm
@@ -141,9 +143,9 @@ Trước deadline:
 
 1. Điền đúng đóng góp cá nhân trong `README.md`.
 2. Dán public prototype URL vào `prototype-link.md` và `README.md`.
-3. Điền Phiếu phản hồi từ phiên Dũng trực tiếp điều phối.
-4. Nhận đủ ba Phiếu phản hồi của nhóm và hoàn thiện Bản tổng hợp nhóm.
-5. Chốt một Thay đổi tiếp theo và một điều vẫn chưa được chứng minh.
+3. Kiểm lại hai Phiếu phản hồi T02/T03 từ các phiên Dũng trực tiếp điều phối.
+4. Kiểm đủ ba Phiếu phản hồi T01/T02/T03 và Bản tổng hợp nhóm.
+5. Giữ đúng một Thay đổi tiếp theo và các điều vẫn chưa được chứng minh đã ghi trong synthesis.
 6. Cập nhật AI Support Log bằng reflection thật của Dũng.
 7. Mở mọi link bằng cửa sổ ẩn danh.
 8. Kiểm tra tên repo và cấu trúc file trước khi dán link GitHub/Drive/LMS.

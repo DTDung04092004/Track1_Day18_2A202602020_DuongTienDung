@@ -14,12 +14,11 @@
 - `prototype/option-a.html`, `option-b.html`, `option-c.html` là ba micro-prototype.
 - `test-script.md` giữ cùng context, outcome task và observation focus.
 - `prototype-link.md` có checklist publish và kiểm link ẩn danh.
+- Ba phiên T01/T02/T03 đều dùng cả A/B/C và tự thao tác được control/recovery mà không cần facilitator chỉ nút.
 
 ## Status — Trạng thái
 
-**CONDITIONAL PASS — Public prototype đã hoạt động, chưa hoàn tất usability check.**
-
-Còn phải:
+**PASS — ĐẠT.**
 
 Public URL đã được deploy và xác minh trả về HTTP 200 ngày 19/08/2026:
 
@@ -27,4 +26,4 @@ Public URL đã được deploy và xác minh trả về HTTP 200 ngày 19/08/20
 https://dtdung04092004.github.io/Track1_Day18_2A202602020_DuongTienDung/
 ```
 
-Còn phải cho một người không build tự dùng A/B/C mà không được giải thích, rồi ghi lại interaction breakdown nếu có.
+Ba người ngoài nhóm đã trải nghiệm cùng task trên A/B/C; breakdown và recovery được ghi trong ba Feedback Notes.

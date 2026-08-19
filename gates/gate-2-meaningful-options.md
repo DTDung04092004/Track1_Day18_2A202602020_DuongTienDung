@@ -16,8 +16,10 @@
 
 Comparison Contract, content fixture, three options và Distance Check nằm trong `three-option-design-sheet.md`.
 
+Ba phiên T01/T02/T03 đều trải nghiệm được ba cách chia vai trò khác nhau: A yêu cầu tự phân loại, B hỏi lại tại phần chưa chắc chắn và C tạo bản nháp để duyệt. Các đánh đổi được người thử nêu cũng khác nhau, không dựa trên màu hoặc bố cục.
+
 ## Status — Trạng thái
 
-**PASS at design level — Đạt ở mức thiết kế.**
+**PASS — ĐẠT.**
 
-Cần cho một người không build thử mô tả sự khác biệt A/B/C mà không dựa vào màu hoặc bố cục.
+Design Sheet và evidence thử cho thấy A/B/C là ba solution mechanisms khác nhau nhưng vẫn giữ cùng comparison contract.

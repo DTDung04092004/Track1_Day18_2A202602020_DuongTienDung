@@ -324,8 +324,9 @@ Xem lại bản nháp trước khi lưu.
 
 - [x] Prototype kỹ thuật đã được tạo.
 - [x] Technical static test PASS.
-- [ ] Cần một người khác thử mà facilitator không giải thích.
+- [x] T01/T02/T03 đã tự trải nghiệm cả A/B/C với cùng task; control/recovery được dùng mà không cần facilitator chỉ nút.
 
 ## Gate 5 — Learning — Bài học thu được
 
-- [ ] Chưa thể hoàn thành trước phiên test thật.
+- [x] Có ba Feedback Notes độc lập, pattern/khác biệt, One Next Change và Still Unproven.
+- [x] Nhóm chọn B làm cơ chế chính và thêm Gated Confirmation; không tuyên bố solution đã validated.
