@@ -22,6 +22,143 @@ function resetPage() {
   window.location.reload();
 }
 
+function setProgress(step, label) {
+  const text = qs('progress-text');
+  const bar = qs('progress-bar');
+
+  if (text) {
+    text.textContent = `Bước ${step}/3`;
+    const strong = text.parentElement.querySelector('strong');
+    if (strong) {
+      strong.textContent = label;
+    }
+  }
+
+  if (bar) {
+    bar.style.width = `${Math.round((step / 3) * 100)}%`;
+  }
+}
+
+const SOURCE_CONTEXT = {
+  '03:15': {
+    title: 'INNER JOIN — Chỉ giữ dữ liệu khớp',
+    text: 'INNER JOIN chỉ trả về các dòng có bản ghi tương ứng ở cả hai bảng. Nếu một dòng không có bản ghi khớp, dòng đó không xuất hiện trong kết quả.'
+  },
+  '06:32': {
+    title: 'LEFT JOIN — Giữ toàn bộ bảng bên trái',
+    text: 'LEFT JOIN giữ tất cả dòng từ bảng bên trái. Khi không có dữ liệu tương ứng ở bảng bên phải, các cột phía phải nhận giá trị NULL.'
+  },
+  '09:48': {
+    title: 'Điều kiện ON',
+    text: 'Mệnh đề ON xác định điều kiện ghép hai bảng. Điều kiện này ảnh hưởng trực tiếp đến những dòng được xem là khớp.'
+  },
+  '10:20': {
+    title: 'ON và WHERE trong LEFT JOIN',
+    text: 'Điều kiện đặt trong ON tác động đến lúc ghép bảng; điều kiện đặt trong WHERE lọc kết quả sau khi ghép. Với LEFT JOIN, hai vị trí có thể tạo ra kết quả khác nhau.'
+  },
+  '12:05': {
+    title: 'FULL OUTER JOIN',
+    text: 'FULL OUTER JOIN giữ các dòng khớp và cả những dòng không khớp từ hai phía. Phần còn thiếu ở mỗi phía được điền bằng NULL.'
+  },
+  '14:30': {
+    title: 'JOIN nhiều bảng',
+    text: 'Khi mỗi bảng có nhiều dòng cùng khóa, phép JOIN có thể làm số dòng kết quả tăng nhanh. Cần kiểm tra tính duy nhất của khóa trước khi ghép.'
+  }
+};
+
+function ensureSourceModal() {
+  if (qs('source-modal')) {
+    return;
+  }
+
+  const modal = document.createElement('div');
+  modal.id = 'source-modal';
+  modal.className = 'modal hidden';
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-labelledby', 'source-modal-title');
+  modal.innerHTML = `
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <span class="modal-kicker" id="source-modal-time">Bài 4</span>
+          <h2 id="source-modal-title">Ngữ cảnh trong bài học</h2>
+        </div>
+        <button class="icon-btn" type="button" data-close-modal aria-label="Đóng">×</button>
+      </div>
+      <p id="source-modal-text"></p>
+      <div class="source-player" aria-hidden="true">
+        <span class="play-icon">▶</span>
+        <div><strong>Mô phỏng đoạn bài giảng</strong><small>Prototype dùng nội dung dựng sẵn, không phát video thật.</small></div>
+      </div>
+      <button class="btn" type="button" data-close-modal>Đã hiểu</button>
+    </div>`;
+  document.body.appendChild(modal);
+}
+
+function openSource(sourceElement) {
+  const match = sourceElement.textContent.match(/\d{2}:\d{2}/);
+
+  if (!match) {
+    return;
+  }
+
+  const timestamp = match[0];
+  const context = SOURCE_CONTEXT[timestamp] || {
+    title: 'Ngữ cảnh trong bài học',
+    text: 'Đây là nội dung gốc được liên kết với mục ghi chú này.'
+  };
+
+  ensureSourceModal();
+  qs('source-modal-time').textContent = `Bài 4 · ${timestamp}`;
+  qs('source-modal-title').textContent = context.title;
+  qs('source-modal-text').textContent = context.text;
+  show('source-modal');
+  document.body.classList.add('modal-open');
+  qs('source-modal').querySelector('.icon-btn').focus();
+}
+
+function closeSourceModal() {
+  hide('source-modal');
+  document.body.classList.remove('modal-open');
+}
+
+document.addEventListener('click', (event) => {
+  const closeControl = event.target.closest('[data-close-modal]');
+  if (closeControl) {
+    closeSourceModal();
+    return;
+  }
+
+  const source = event.target.closest('.source');
+  if (source && /\d{2}:\d{2}/.test(source.textContent)) {
+    openSource(source);
+  }
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeSourceModal();
+  }
+
+  if ((event.key === 'Enter' || event.key === ' ') && event.target.classList.contains('source')) {
+    event.preventDefault();
+    openSource(event.target);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.source').forEach((source) => {
+    if (/\d{2}:\d{2}/.test(source.textContent)) {
+      source.classList.add('source-link');
+      source.setAttribute('role', 'button');
+      source.setAttribute('tabindex', '0');
+      source.setAttribute('title', 'Mở ngữ cảnh trong bài học');
+    }
+  });
+});
+
 function toggleEditing(containerId, button) {
   const container = qs(containerId);
 
@@ -49,6 +186,7 @@ function toggleEditing(containerId, button) {
    ======================================== */
 
 function optionAOrganize() {
+  setProgress(3, 'Kiểm tra và quyết định');
   const buckets = {
     main: qs('a-main-result'),
     unclear: qs('a-unclear-result'),
@@ -74,8 +212,11 @@ function optionAOrganize() {
     item.textContent = select.dataset.content;
 
     const source = document.createElement('span');
-    source.className = 'source';
+    source.className = 'source source-link';
     source.textContent = `Nguồn: Bài 4 · ${select.dataset.source}`;
+    source.setAttribute('role', 'button');
+    source.setAttribute('tabindex', '0');
+    source.setAttribute('title', 'Mở ngữ cảnh trong bài học');
     item.appendChild(source);
     bucket.appendChild(item);
   });
@@ -119,6 +260,7 @@ function optionBStart() {
 }
 
 function optionBConfirm() {
+  setProgress(3, 'Kiểm tra và quyết định');
 
   const checked =
     document.querySelector(
@@ -141,6 +283,7 @@ function optionBConfirm() {
 }
 
 function optionBSkip() {
+  setProgress(3, 'Kiểm tra và quyết định');
 
   const choiceHeading = qs('b-choice');
 
@@ -159,6 +302,7 @@ function optionBSkip() {
    ======================================== */
 
 function optionCGenerate() {
+  setProgress(3, 'Kiểm tra và quyết định');
   hide('c-intro');
   show('c-draft');
 }

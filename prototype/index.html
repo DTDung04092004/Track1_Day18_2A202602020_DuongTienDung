@@ -19,6 +19,8 @@
 
 <body>
 
+<a class="skip-link" href="#main-content">Bỏ qua phần đầu trang</a>
+
 <div class="shell">
 
   <div class="topbar">
@@ -39,7 +41,15 @@
 
   </div>
 
-  <section class="panel">
+  <main id="main-content" class="panel">
+
+    <div class="journey" aria-label="Tiến trình trải nghiệm">
+      <div class="journey-step active"><span>1</span><strong>Chọn cách làm</strong></div>
+      <div class="journey-line"></div>
+      <div class="journey-step"><span>2</span><strong>Tạo ghi chú</strong></div>
+      <div class="journey-line"></div>
+      <div class="journey-step"><span>3</span><strong>So sánh</strong></div>
+    </div>
 
     <h1>
       Bạn vừa học xong bài SQL JOIN cơ bản
@@ -59,6 +69,13 @@
       Nội dung đầu vào giống nhau ở cả ba phương án. Điểm khác biệt là bạn và AI sẽ chia nhau công việc như thế nào.
     </p>
 
+    <div class="lesson-summary" aria-label="Nội dung đã lưu">
+      <div class="summary-item"><strong>3</strong><span>Ý quan trọng</span></div>
+      <div class="summary-item"><strong>1</strong><span>Phần chưa hiểu</span></div>
+      <div class="summary-item"><strong>1</strong><span>Câu hỏi</span></div>
+      <div class="summary-item"><strong>1</strong><span>Ghi chú cá nhân</span></div>
+    </div>
+
     <div class="grid">
 
       <article class="card option-card option-a">
@@ -72,6 +89,11 @@
         </h2>
 
         <span class="english-label">Source-linked Review Board</span>
+
+        <div class="automation" aria-label="Mức AI hỗ trợ thấp">
+          <span>Mức AI hỗ trợ</span>
+          <div class="automation-dots"><i class="on"></i><i></i><i></i></div>
+        </div>
 
         <p>
           Bạn tự chọn mỗi nội dung thuộc “Điểm chính”, “Chưa hiểu” hay “Việc tiếp theo”.
@@ -103,6 +125,11 @@
 
         <span class="english-label">Guided AI Co-creation</span>
 
+        <div class="automation" aria-label="Mức AI hỗ trợ vừa">
+          <span>Mức AI hỗ trợ</span>
+          <div class="automation-dots"><i class="on"></i><i class="on"></i><i></i></div>
+        </div>
+
         <p>
           AI tự sắp xếp những phần rõ ràng và hỏi bạn trước khi xử lý phần chưa chắc chắn.
         </p>
@@ -132,6 +159,11 @@
 
         <span class="english-label">AI Auto-draft + Human Review</span>
 
+        <div class="automation" aria-label="Mức AI hỗ trợ cao">
+          <span>Mức AI hỗ trợ</span>
+          <div class="automation-dots"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+        </div>
+
         <p>
           AI tạo sẵn toàn bộ bản nháp. Bạn kiểm tra nguồn, sửa hoặc loại bỏ nội dung trước khi lưu.
         </p>
@@ -151,7 +183,7 @@
 
     </div>
 
-  </section>
+  </main>
 
   <footer>
     Đây là dữ liệu minh họa dùng để thử giao diện, không phải dữ liệu phỏng vấn.
